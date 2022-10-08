@@ -9,48 +9,9 @@
     </head>
     <body>
        
-        <script src="https://unpkg.com/vue@next"></script>
-        <script src="https://unpkg.com/vue-router@next"></script>
         <script>
-            const state={
-                currentPage: 'Products'
-                products: [],
-                categoties: [],
-                brands: []
-            }
-            computed: {
-                brands(){
-                    return this.$store.state.brands;
-                }
-            }
-            computed: {
-                amountBrands(){
-                    return this.$store.state.brands.length;
-                }
-            }
-            computed: {
-                amountBrands(){
-                    return this.$store.getters.getAmountBrands;
-                }
-            }
-            const mutations={
-                SET_BRANDS(state, brands){
-                    state.brands=brands;
-                }
-            }
-            context.commit('SET_BRANDS', brands);
-            const actions={
-                getBrands(context){
-                    axios
-                        .get('/api/v1/brands')
-                        .then(response=>{
-                            context.commit('SET_BRANDS', response.data);
-                        })
-                }
-            }
-            created (){
-                this.$store.dispatch('getBrands')
-            }
+          <h1>Helloworld</h1>
+            <p>Crazy world</p>
 
         </script>
     </body>
